@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+{% block title %}Nos produits - MÉGA PROMO{% endblock %}
+
+{% block content %}
+        <br/>
+       <div class="row">
+                <!--Zone de filtre-->
+               <div class="col-md-2">
+                       <h3>Filtrer</h3>
+                   {{ form(form) }}
+               </div>
+
+                <!--Zone du magasin-->
+                <div class="col-md-10">
+                       <h3>Nos produits</h3>
+                       <div class="row">
+                               {% for product in products %}
+                                   <div class="col-md-4">
+                                       {% include 'product/single_product.html.twig' %}
+                                   </div>
+                               {% endfor %}
+                       </div>
+               </div>
+       </div>
+        <br/>
+{% endblock %}

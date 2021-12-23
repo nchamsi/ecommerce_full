@@ -1,0 +1,14 @@
+<div class="row">
+<div class="row text-center">
+    <h3 class="animated-pulse">NOS MEILLEURES VENTES !!!!!</h3>
+</div>
+{% for product in products %}
+    <div class="col-lg-4">
+        <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="rounded" width="140" height="140">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.subtitle }}</p>
+        <p>{{ (product.price /100)|number_format(2, ',', '.') }} €</p>
+        <p><a class="btn btn-secondary" href="{{ path('product', {'slug' : product.slug }) }}" role="button">Acheter tout de suite &raquo;</a></p>
+    </div>
+{% endfor %}
+</div>

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+{% block title %}Se connecter - MÉGA PROMO{% endblock %}
+
+{% block content %}
+
+    <h1>Réinitialiser mon mot de passe</h1>
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+    <div class="block-small">
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-info">{{ message }}</div>
+        {% endfor %}
+        {{ form(form) }}
+    </div>
+{% endblock %}

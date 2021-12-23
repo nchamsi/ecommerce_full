@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes commandes - MÉGA PROMO{% endblock %}
+
+{% block content %}
+
+    <h1>Mes commandes</h1>
+
+    C'est dans cet espace que vous pourrez gérer toutes vos commandes.<br/>
+    <a href="{{ path('account') }}">Retour</a>
+    <hr>
+    {% if orders | length == 0 %}
+        <p class="text-center">
+            Vous n'avez pas encore passé de commande sur MÉGA PROMO.
+        </p>
+    {% else %}
+        <div class="row">
+            <table class="table table-dark table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Référence</th>
+                    <th scope="col">Statut</th>
+                    <th scope="col">Passée le</th>
+                    <th scope="col">Produits</th>
+                    <th scope="col">Total</th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for order in orders %}
+                    <tr>
+                        <td><span class="badge">{{ order.reference }}</span></td>
+                        <td>
+                            {% if order.state==1 %}
+                            Paiement accepté
+                            {% elseif order.state==2 %}
+                            Préparation en cours
+                            {% elseif order.state==3 %}
+                            Livraison en cours
+                            {% endif %}
+                        </td>
+                        <td>{{ order.createdAt |date('d/m/Y') }}</td>
+                        <td>{{ order.orderDetails|length }}</td>
+                        <td>{{ ((order.carrierPrice + order.getTotal) / 100) | number_format(2, ',','.') }} €</td>
+                        <td class="text-right"><a style="text-decoration: none" href="{{ path('account_order_show', {'reference' : order.reference }) }}">Voir ma commande</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    {% endif %}
+
+{% endblock %}

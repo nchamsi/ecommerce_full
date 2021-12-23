@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block carousel %} {% endblock %}
+
+{% block content %}
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+    <!-- Three columns of text below the carousel -->
+        {% include 'product/best_products.html.twig' %}
+    <!-- /.row -->
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading-my">Julie Martinez : <span class="text-muted-my">"Ce site est une tuerie. On en redemande !"</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ asset('assets/img/julie-contente.jpg') }}" alt="julie-contente" class="img-fluid mx-auto" width="500" height="500">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading-my">Steve Robert : <span class="text-muted-my">Comme on dit, vu les prix. Il n'y a pas de mal à se faire plaisir !</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img src="{{ asset('assets/img/steve-content.jpg') }}" alt="steve-content" class="img-fluid mx-auto" width="500" height="500">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading-my">Stéphanie Foy : <span class="text-muted-my">"Depuis que je connais Méga Promo. C'est la fête !"</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ asset('assets/img/stephanie-contente.jpg') }}" alt="stephanie-contente" class="img-fluid mx-auto" width="500" height="500">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+{% endblock %}

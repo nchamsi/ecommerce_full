@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Mon compte - MÉGA PROMO{% endblock %}
+
+{% block content %}
+
+    <h1>Mon compte</h1>
+    <a href="{{ path('account') }}">Retour</a>
+
+    <hr>
+    {{ form(form) }}
+    <hr>
+
+{% endblock %}
