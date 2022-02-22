@@ -22,7 +22,6 @@ The application displays a virtual electronic store that contains virtual produc
 Users can do the following :
 <ul>
     <li>Create an account and manage it
-        ![manageaccount](https://user-images.githubusercontent.com/91179295/155231502-5f224baa-c687-4709-81b4-2c2bc833538e.gif)
     </li>
 </ul>
 <h2>Run</h2>
