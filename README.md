@@ -15,11 +15,17 @@ An ecommerce website using symfony 5.4, twig and mysql.
 
 <h2>Demo</h2>
 
-![intro](https://user-images.githubusercontent.com/91179295/155222557-313d9454-8c1d-404a-872e-19b8628d26c3.PNG)
+![home](https://user-images.githubusercontent.com/91179295/155227456-8707ccee-f49d-41d8-8e35-4b282525015d.png)
 
+<h2>Features</h2>
+The application displays a virtual electronic store that contains virtual products at best prices.
+Users can do the following :
+<ul>
+    <li>Create an account and manage it
+    </li>
+</ul>
 <h2>Run</h2>
 <h2>Technology</h2>
-<h2>Features</h2>
 <h2>Database Models</h2>
 
 
