@@ -14,6 +14,9 @@
 An ecommerce website using symfony 5.4, twig and mysql.
 
 <h2>Demo</h2>
+
+![intro](https://user-images.githubusercontent.com/91179295/155222557-313d9454-8c1d-404a-872e-19b8628d26c3.PNG)
+
 <h2>Run</h2>
 <h2>Technology</h2>
 <h2>Features</h2>
