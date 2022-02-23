@@ -6,7 +6,6 @@
         <li>Features</li>
         <li>Technology</li>
         <li>Run</li>
-        <li>Database Models</li>
     </ul>
 
 <h2>Introduction</h2>
@@ -28,10 +27,19 @@ Users can do the following :
     <li>Manage products with photo</li>
     <li>The profile contains all orders a user has made</li>
 </ul>
-<h2>Run</h2>
-
-
 <h2>Technology</h2>
-<h2>Database Models</h2>
+<ul>
+    <li>Php 7.4</li>
+    <li>MySql 5.1.1</li>
+    <li>Bootsrap 5.1.3</li>
+    <li>FontAwesome</li>
+    <li>Stripe</li>
+    <li>MailJet</li>
+    <li>EasyAdmin3</li>
+</ul>
+<h2>Run</h2>
+To run this application, you must set your environmental variables. Some of them have been discarded from my repository.
+After clone the project, run migrations, create your user and set his role in phpmyadmin.
+You must have a mailjet and stripe accounts. 
 
 
